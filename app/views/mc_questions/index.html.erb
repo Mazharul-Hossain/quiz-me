@@ -1,0 +1,14 @@
+<h1>Multiple-Choice Questions</h1>
+
+<% questions.each do |question| %>
+    <div id=<%= dom_id(question) %> >
+        <p> <%= question.question %> </p>
+        <% choices = [question.answer, question.distractor_1, question.distractor_2] %>
+        <% choices.each do |choice| %>
+            <div>
+                <%= radio_button_tag "guess_#{question.id}", choice, checked = choice == question.answer, disabled: true %>
+                <%= label_tag "guess_#{question.id}_#{choice}", choice  %> 
+            </div>
+        <% end %>
+    </div>    
+<% end %>

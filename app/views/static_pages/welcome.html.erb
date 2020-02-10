@@ -1,0 +1,29 @@
+ <h1>Welcome to QuizMe!</h1>
+ <p>
+   QuizMe is a free <%= link_to "Quizlet", "https://quizlet.com", target: "_blank" %> Quizlet style quizzing application that helps you learn by taking quizzes and trying to improve your scores.
+ </p>
+
+ <%= image_tag "quiz-bubble.png", height: 300 %>
+ 
+ <h2>Features</h2>
+
+ <p>
+   QuizMe allows users to:
+ </p>
+
+ <ul>
+   <% features.each do |f| %>
+    <li> <%= f %> </li>
+   <% end %>
+ </ul>
+
+ <p>
+   QuizMe also supports a variety of question styles like multiple choice and fill in the blank.
+ </p>
+
+ <p><%= link_to "About", about_path %> <%= link_to "contact", contact_path %></p>
+
+
+
+<h1>StaticPages#welcome</h1>
+<p>Find me in app/views/static_pages/welcome.html.erb</p>
