@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Adds model attributes/routes to top of model files/routes file
 gem 'annotate', group: :development
+
+gem 'octicons'
