@@ -61,3 +61,4 @@ gem 'annotate', group: :development
 
 # Authentication
 gem 'devise'
+gem 'octicons'

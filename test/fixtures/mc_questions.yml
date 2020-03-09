@@ -9,6 +9,15 @@
 #  question     :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  quiz_id      :bigint
+#
+# Indexes
+#
+#  index_mc_questions_on_quiz_id  (quiz_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (quiz_id => quizzes.id)
 #
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
@@ -18,21 +27,25 @@ one:
   answer: MyA1String
   distractor_1: MyD11String
   distractor_2: MyD12String
+  quiz: one
 
 two:
   question: MyString_2
   answer: MyA2String
   distractor_1: MyD21String
   distractor_2: MyD22String
+  quiz: one
 
 three:
   question: By default, every Rails model is a subclass of which superclass?
   answer: ApplicationRecord
   distractor_1: Object
   distractor_2: ActiveModel
+  quiz: one
 
 four:
   question: The command rails db:migrate updates the schema.rb file.
   answer: true
   distractor_1: false
   distractor_2: # blank loads as nil
+  quiz: one
