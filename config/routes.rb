@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   delete 'mc_questions/:id', to: 'mc_questions#destroy' # destroy
 
-  root to: redirect('/mc_questions', status: 302)
+  root to: redirect('/welcome', status: 302)
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
